@@ -18,7 +18,12 @@ namespace RapidPay.Application.Features.Add
             _cardRepository = cardRepository;
             _mapper = mapper;
         }
-
+        /// <summary>
+        /// Adding card to the system
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<AddCardResponse> Handle(AddCardRequest request,
             CancellationToken cancellationToken)
         {
