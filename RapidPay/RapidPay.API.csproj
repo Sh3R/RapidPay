@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RapidPay.Application\**" />
+    <Compile Remove="RapidPay.Domain\**" />
+    <Compile Remove="RapidPay.Infrastructure\**" />
+    <Content Remove="RapidPay.Application\**" />
+    <Content Remove="RapidPay.Domain\**" />
+    <Content Remove="RapidPay.Infrastructure\**" />
+    <EmbeddedResource Remove="RapidPay.Application\**" />
+    <EmbeddedResource Remove="RapidPay.Domain\**" />
+    <EmbeddedResource Remove="RapidPay.Infrastructure\**" />
+    <None Remove="RapidPay.Application\**" />
+    <None Remove="RapidPay.Domain\**" />
+    <None Remove="RapidPay.Infrastructure\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RapidPay.Application\RapidPay.Application.csproj" />
+    <ProjectReference Include="..\RapidPay.Domain\RapidPay.Domain.csproj" />
+    <ProjectReference Include="..\RapidPay.Infrastructure\RapidPay.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
